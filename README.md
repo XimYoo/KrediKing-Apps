@@ -4,10 +4,12 @@ KrediKing is a web application for managing credit card data and monthly bills. 
 
 ## Features
 
+- **Google Oauthentication**: Allow users to log in using their Google accounts securely.
 - **Credit Card Management**: Add, edit, and delete credit card information.
 - **Monthly Bill Management**: Add, edit, and delete monthly bills associated with credit cards.
 - **Telegram Notifications**: Send notifications to Telegram when a new monthly bill is added.
 - **DataTable**: Display monthly bill data in a readable and manageable table format.
+- **Responsive Design**: User interface optimized for desktop and mobile devices.
 
 ## Technologies Used
 
@@ -49,6 +51,5 @@ KrediKing is a web application for managing credit card data and monthly bills. 
 6. **Access the application**:
 - Open your web browser and navigate to http://localhost/KrediKing-Apps (adjust the URL as per your server setup).
 
-## Usage
 
 
