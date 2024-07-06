@@ -15,6 +15,7 @@ KrediKing is a web application for managing credit card data and monthly bills. 
 - MySQL
 - JavaScript (jQuery, DataTables)
 - Bootstrap
+- Google Oauth
 - Telegram Bot API
 
 ## Prerequisites
@@ -33,4 +34,21 @@ KrediKing is a web application for managing credit card data and monthly bills. 
 2. **Navigate to the project directory**:
    ```bash
    cd KrediKing-Apps
+
+3. **Import the database**:
+- Open phpMyAdmin or another MySQL database management tool.
+- Create a new database named KrediKing.
+- Import the krediking.sql file located in the project folder into the KrediKing database.
+
+4. **Configure database connection**:
+- Open config.php and update the database connection settings (hostname, username, password, database) according to your local environment.
+
+5. **Start the web server**:
+- Ensure your web server (e.g., Apache) and MySQL server are running using XAMPP or similar tools.
+
+6. **Access the application**:
+- Open your web browser and navigate to http://localhost/KrediKing-Apps (adjust the URL as per your server setup).
+
+## Usage
+
 
