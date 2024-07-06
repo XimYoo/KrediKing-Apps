@@ -30,6 +30,7 @@ KrediKing is a web application for managing credit card data and monthly bills. 
    ```bash
    git clone https://github.com/XimYoo/KrediKing-Apps.git
 
-   1. **Navigate to the project directory**:
+2. **Navigate to the project directory**:
    ```bash
    cd KrediKing-Apps
+
