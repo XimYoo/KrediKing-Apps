@@ -23,14 +23,14 @@ $view = mysqli_fetch_array($query);
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Credit Card ID</label>
-                                <input type="number" class="form-control" name="credit_card_id" placeholder="Enter Credit Card ID" value="<?php echo $view['credit_card_id']; ?>" >
+                                <input type="number" class="form-control" name="credit_card_id" placeholder="Enter Credit Card ID" value="<?php echo $view['credit_card_id']; ?>">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Amount</label>
-                                <input type="number" step="0.01" class="form-control" name="amount" placeholder="Enter Amount" value="<?php echo $view['amount']; ?>" >
+                                <input type="number" step="0.01" class="form-control" name="amount" placeholder="Enter Amount" value="<?php echo $view['amount']; ?>">
                             </div>
                         </div>
                     </div>
@@ -39,14 +39,17 @@ $view = mysqli_fetch_array($query);
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Due Date</label>
-                                <input type="date" class="form-control" name="due_date" value="<?php echo $view['due_date']; ?>" >
+                                <input type="date" class="form-control" name="due_date" value="<?php echo $view['due_date']; ?>">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Status</label>
-                                <input type="text" class="form-control" name="status" placeholder="Enter Status" value="<?php echo $view['status']; ?>" >
+                                <select class="form-control" name="status">
+                                    <option value="Unpaid" <?php echo ($view['status'] == 'Unpaid') ? 'selected' : ''; ?>>Unpaid</option>
+                                    <option value="Paid" <?php echo ($view['status'] == 'Paid') ? 'selected' : ''; ?>>Paid</option>
+                                </select>
                             </div>
                         </div>
                     </div>

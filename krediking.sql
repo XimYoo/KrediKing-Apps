@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2024 at 09:36 AM
+-- Generation Time: Jul 06, 2024 at 07:34 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,13 +39,6 @@ CREATE TABLE `credit_cards` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `credit_cards`
---
-
-INSERT INTO `credit_cards` (`id`, `user_id`, `number`, `name`, `expiration_date`, `cvv`, `limit`, `balance`, `created_at`) VALUES
-(1, 1, '0012 3456 7890 8', 'william', '2024-06-18', '123', 10000.00, 8000.00, '2024-06-30 06:17:23');
-
 -- --------------------------------------------------------
 
 --
@@ -61,13 +54,6 @@ CREATE TABLE `monthly_bills` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `monthly_bills`
---
-
-INSERT INTO `monthly_bills` (`id`, `credit_card_id`, `amount`, `due_date`, `status`, `created_at`) VALUES
-(1, 1, 300.00, '2024-06-30', 'Unpaid', '2024-06-30 06:18:38');
-
 -- --------------------------------------------------------
 
 --
@@ -76,22 +62,13 @@ INSERT INTO `monthly_bills` (`id`, `credit_card_id`, `amount`, `due_date`, `stat
 
 CREATE TABLE `transactions` (
   `id` int(11) NOT NULL,
-  `credit_card_id` int(11) NOT NULL,
+  `credit_card_id` int(11) DEFAULT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `amount` decimal(10,2) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `category` varchar(100) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `transactions`
---
-
-INSERT INTO `transactions` (`id`, `credit_card_id`, `date`, `amount`, `description`, `category`, `created_at`) VALUES
-(7, 1, '2024-06-21 06:19:00', 200.00, 'Shopping', 'Groceries', '2024-06-30 06:19:38'),
-(8, 1, '2024-06-25 06:19:00', 150.00, 'KRL', 'Transportation', '2024-06-30 06:20:00'),
-(9, 1, '2024-06-28 06:20:00', 350.00, 'Bruno Mars Concert', 'Entertainment', '2024-06-30 06:20:28');
 
 -- --------------------------------------------------------
 
@@ -103,16 +80,15 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `nama` varchar(35) DEFAULT NULL,
   `username` varchar(25) DEFAULT NULL,
-  `password` varchar(25) DEFAULT NULL,
-  `role` varchar(10) NOT NULL
+  `password` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `nama`, `username`, `password`, `role`) VALUES
-(1, 'William Yohanes Hutubessy', 'admin', '12345', 'admin');
+INSERT INTO `users` (`id`, `nama`, `username`, `password`) VALUES
+(1, 'William', 'admin', '12345');
 
 --
 -- Indexes for dumped tables
@@ -150,16 +126,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `credit_cards`
+--
+ALTER TABLE `credit_cards`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `monthly_bills`
 --
 ALTER TABLE `monthly_bills`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`

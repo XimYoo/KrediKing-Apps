@@ -120,7 +120,7 @@ $upcomingBillsProgress = ($upcomingBills / $payBillsGoal) * 100;
                         <div class="row">
                             <div class="col-md-8">
                                 <p class="text-center">
-                                    <strong>Expenses: 1 Jun, 2024 - 30 Jun, 2024</strong>
+                                    <strong>Expenses: 1 July, 2024 - 30 July, 2024</strong>
                                 </p>
 
                                 <div class="chart">
@@ -177,17 +177,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var expensesChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['1 Jun', '5 Jun', '10 Jun', '15 Jun', '20 Jun', '25 Jun', '30 Jun'],
+      labels: ['1 July', '5 July', '10 July', '15 July', '20 July', '25 July', '30 July'],
       datasets: [{
         label: 'Total Debt',
-        data: [200, 400, 500, 700, 800, 1500, <?php echo $totalDebt; ?>],
+        data: [0, <?php echo $totalDebt; ?>],
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1
       },
       {
         label: 'Upcoming Bills',
-        data: [50, 100, 200, 250, 300, 400, <?php echo $upcomingBills; ?>],
+        data: [0, <?php echo $upcomingBills; ?>],
         backgroundColor: 'rgba(255, 206, 86, 0.2)',
         borderColor: 'rgba(255, 206, 86, 1)',
         borderWidth: 1
