@@ -22,7 +22,7 @@ KrediKing is a web application for managing credit card data and monthly bills. 
 - XAMPP (for local development environment)
 - Git
 - GitHub Account
-- Telegram Account and Bot API Token
+- Telegram id (input in C:\xampp\htdocs\KrediKing\KrediKing\update\update_data_bill.php) and Bot API Token 
 
 ## Installation
 
