@@ -10,6 +10,11 @@ KrediKing is a web application for managing credit card data and monthly bills. 
 - **Telegram Notifications**: Send notifications to Telegram when a new monthly bill is added.
 - **DataTable**: Display monthly bill data in a readable and manageable table format.
 - **Responsive Design**: User interface optimized for desktop and mobile devices.
+![image](https://github.com/user-attachments/assets/63f48570-9991-48c6-aecb-8208e63a63c1) ![image](https://github.com/user-attachments/assets/c894eebe-1ec7-4ddf-9cbf-3dfbf636517e) ![image](https://github.com/user-attachments/assets/4580b300-44bb-41be-bd4d-6dca73c25260)![image](https://github.com/user-attachments/assets/ebb6e1de-7e78-4d45-88e2-7208b53868b5)![image](https://github.com/user-attachments/assets/624bbf45-aadf-4638-9b83-df5e44c0c0ef)
+
+
+
+
 
 ## Technologies Used
 
@@ -24,7 +29,6 @@ KrediKing is a web application for managing credit card data and monthly bills. 
 
 - XAMPP (for local development environment)
 - Git
-- GitHub Account
 - Telegram id (input in C:\xampp\htdocs\KrediKing\KrediKing\update\update_data_bill.php) and Bot API Token 
 
 ## Installation
